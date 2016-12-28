@@ -46,9 +46,8 @@ public class OrgIndexService {
                                             String strTitle = strLine.replaceAll("\\#\\+TITLE:", "").trim();
                                             String strFileHtmlName = fileOrg.getName().substring(0,
                                                     fileOrg.getName().length() - 3) + "html";
-                                            out.write("[[./" + strPathName + "/" + strFileHtmlName + "][" + strTitle
+                                            out.write("- [[./" + strPathName + "/" + strFileHtmlName + "][" + strTitle
                                                     + "]]");
-                                            out.newLine();
                                             out.newLine();
                                         }
                                     }
