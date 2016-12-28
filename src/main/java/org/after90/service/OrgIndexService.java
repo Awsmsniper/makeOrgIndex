@@ -15,7 +15,7 @@ public class OrgIndexService {
         FileWriter writer = null;
         BufferedWriter out = null;
         try {
-            writer = new FileWriter("../after90/index.org");
+            writer = new FileWriter("./index.org");
             out = new BufferedWriter(writer);
             out.write("#+TITLE: After90");
             out.newLine();
@@ -23,7 +23,7 @@ public class OrgIndexService {
             out.newLine();
             out.write("#+EMAIL: zgj0315@gmail.com");
             out.newLine();
-            for (File filePath : (new File("../after90")).listFiles()) {
+            for (File filePath : (new File("./")).listFiles()) {
                 if (filePath.isDirectory() && !".git".equals(filePath.getName())) {
                     String strPathName = filePath.getName();
                     out.write("* " + strPathName);
